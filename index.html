@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silva & Advogados Associados</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #b99b6b;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Barra de navegação -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold text-gray-800 heading-font">Silva & Advogados</div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="nav-link text-gray-700 hover:text-gray-900 py-2">Início</a>
+                    <a href="#sobre" class="nav-link text-gray-700 hover:text-gray-900 py-2">Sobre Nós</a>
+                    <a href="#servicos" class="nav-link text-gray-700 hover:text-gray-900 py-2">Áreas de Atuação</a>
+                    <a href="#equipe" class="nav-link text-gray-700 hover:text-gray-900 py-2">Equipe</a>
+                    <a href="#contato" class="nav-link text-gray-700 hover:text-gray-900 py-2">Contato</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-500 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Menu mobile -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Início</a>
+                <a href="#sobre" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Sobre Nós</a>
+                <a href="#servicos" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Áreas de Atuação</a>
+                <a href="#equipe" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Equipe</a>
+                <a href="#contato" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero h-screen flex items-center justify-center text-white pt-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 heading-font">Excelência em Advocacia</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Protegendo seus direitos com expertise e comprometimento desde 1985</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contato" class="bg-amber-800 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded transition duration-300">Agende uma Consulta</a>
+                <a href="#servicos" class="bg-transparent hover:bg-white hover:text-gray-900 text-white font-bold py-3 px-6 border border-white rounded transition duration-300">Nossos Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 heading-font">Sobre Nós</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto mb-8"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Com mais de três décadas de atuação no mercado jurídico, a Silva & Advogados se consolidou como referência em advocacia tradicional, oferecendo soluções jurídicas personalizadas e eficientes.</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Escritório de advocacia" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 heading-font">Nossa História e Valores</h3>
+                    <p class="text-gray-600 mb-4">Fundada em 1985 pelo Dr. Carlos Silva, nossa banca surgiu com o propósito de oferecer assessoria jurídica de excelência, pautada nos princípios da ética, transparência e comprometimento com os clientes.</p>
+                    <p class="text-gray-600 mb-6">Ao longo dos anos, expandimos nossa atuação para diversas áreas do direito, sempre mantendo o foco na qualidade do atendimento e na busca por resultados que atendam plenamente às expectativas de nossos clientes.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-balance-scale text-amber-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Ética Profissional</h4>
+                                <p class="text-gray-600 text-sm">Atuamos sempre dentro dos mais altos padrões éticos da advocacia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-star text-amber-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Excelência</h4>
+                                <p class="text-gray-600 text-sm">Compromisso com a qualidade em todos os serviços prestados</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-handshake text-amber-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Transparência</h4>
+                                <p class="text-gray-600 text-sm">Relação clara e honesta com nossos clientes</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-heart text-amber-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Dedicação</h4>
+                                <p class="text-gray-600 text-sm">Atendimento personalizado e atenção às necessidades específicas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Áreas de Atuação -->
+    <section id="servicos" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 heading-font">Áreas de Atuação</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto mb-8"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Nossa equipe de advogados especializados está preparada para atender nas mais diversas áreas do Direito, com expertise e dedicação.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-amber-700 text-4xl mb-4">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 heading-font">Direito Civil</h3>
+                    <p class="text-gray-600 mb-4">Atuação em ações de indenização, contratos, obrigações, responsabilidade civil, direitos do consumidor e demais questões relacionadas.</p>
+                    <a href="#" class="text-amber-700 font-semibold hover:text-amber-800 flex items-center">
+                        Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-amber-700 text-4xl mb-4">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 heading-font">Direito Empresarial</h3>
+                    <p class="text-gray-600 mb-4">Assessoria jurídica completa para empresas, incluindo contratos, fusões, aquisições, recuperação judicial e consultoria empresarial.</p>
+                    <a href="#" class="text-amber-700 font-semibold hover:text-amber-800 flex items-center">
+                        Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-amber-700 text-4xl mb-4">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 heading-font">Direito Imobiliário</h3>
+                    <p class="text-gray-600 mb-4">Atuação em compra e venda, locação, usucapião, regularização de imóveis, condomínios e questões envolvendo propriedade.</p>
+                    <a href="#" class="text-amber-700 font-semibold hover:text-amber-800 flex items-center">
+                        Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-amber-700 text-4xl mb-4">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 heading-font">Direito Trabalhista</h3>
+                    <p class="text-gray-600 mb-4">Atuação tanto na defesa de empregados quanto de empregadores em ações trabalhistas, acordos e consultoria preventiva.</p>
+                    <a href="#" class="text-amber-700 font-semibold hover:text-amber-800 flex items-center">
+                        Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-amber-700 text-4xl mb-4">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 heading-font">Direito Penal</h3>
+                    <p class="text-gray-600 mb-4">Defesa criminal em todas as instâncias, habeas corpus, recursos, acompanhamento em delegacias e assessoria em inquéritos policiais.</p>
+                    <a href="#" class="text-amber-700 font-semibold hover:text-amber-800 flex items-center">
+                        Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-amber-700 text-4xl mb-4">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3 heading-font">Direito de Família</h3>
+                    <p class="text-gray-600 mb-4">Atuação em divórcios, pensão alimentícia, guarda de filhos, inventários, testamentos e demais questões familiares.</p>
+                    <a href="#" class="text-amber-700 font-semibold hover:text-amber-800 flex items-center">
+                        Saiba mais <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nossa Equipe -->
+    <section id="equipe" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 heading-font">Nossa Equipe</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto mb-8"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Contamos com uma equipe de advogados altamente qualificados e especializados em diversas áreas do Direito, prontos para oferecer a melhor assessoria jurídica.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Membro 1 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Dr. Carlos Silva" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1 heading-font">Dr. Carlos Silva</h3>
+                        <p class="text-amber-700 mb-3">Sócio Fundador - OAB/SP 123.456</p>
+                        <p class="text-gray-600 text-sm mb-4">Especialista em Direito Civil e Empresarial com mais de 35 anos de experiência.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-amber-700"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-amber-700"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Membro 2 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Dra. Ana Paula Mendes" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1 heading-font">Dra. Ana Paula Mendes</h3>
+                        <p class="text-amber-700 mb-3">Sócia - OAB/SP 234.567</p>
+                        <p class="text-gray-600 text-sm mb-4">Especialista em Direito de Família e Sucessões com 15 anos de experiência.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-amber-700"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-amber-700"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Membro 3 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Dr. Ricardo Almeida" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1 heading-font">Dr. Ricardo Almeida</h3>
+                        <p class="text-amber-700 mb-3">Advogado - OAB/SP 345.678</p>
+                        <p class="text-gray-600 text-sm mb-4">Especialista em Direito Penal e Processo Penal com 10 anos de experiência.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-amber-700"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-amber-700"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Membro 4 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" alt="Dra. Fernanda Oliveira" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-1 heading-font">Dra. Fernanda Oliveira</h3>
+                        <p class="text-amber-700 mb-3">Advogada - OAB/SP 456.789</p>
+                        <p class="text-gray-600 text-sm mb-4">Especialista em Direito Trabalhista e Previdenciário com 8 anos de experiência.</p>
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-gray-500 hover:text-amber-700"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="text-gray-500 hover:text-amber-700"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 heading-font">Depoimentos</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto mb-8"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">O que nossos clientes dizem sobre nosso trabalho</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-500 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"A Silva & Advogados resolveu meu caso trabalhista de forma rápida e eficiente. A Dra. Fernanda foi extremamente atenciosa e profissional em todos os momentos."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="João Carlos" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">João Carlos</h4>
+                            <p class="text-gray-600 text-sm">Empresário</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 2 -->
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-500 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"O Dr. Carlos Silva nos assessorou em um complexo processo de fusão empresarial. Sua expertise foi fundamental para o sucesso da operação."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Mariana Santos" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Mariana Santos</h4>
+                            <p class="text-gray-600 text-sm">Diretora Executiva</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Depoimento 3 -->
+                <div class="testimonial-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-500 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"A Dra. Ana Paula conduziu meu divórcio com sensibilidade e competência, protegendo meus interesses e dos meus filhos. Recomendo totalmente!"</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Roberto Ferreira" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Roberto Ferreira</h4>
+                            <p class="text-gray-600 text-sm">Engenheiro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 heading-font">Entre em Contato</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto mb-8"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">Estamos à disposição para esclarecer suas dúvidas e oferecer a melhor assessoria jurídica para seu caso.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 heading-font">Informações de Contato</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-amber-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Endereço</h4>
+                                    <p class="text-gray-600">Av. Paulista, 1000 - 10º andar<br>São Paulo - SP, 01310-100</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-amber-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Telefone</h4>
+                                    <p class="text-gray-600">(11) 1234-5678<br>(11) 98765-4321 (WhatsApp)</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-amber-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">E-mail</h4>
+                                    <p class="text-gray-600">contato@silvaadvogados.com.br</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-amber-700"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Horário de Funcionamento</h4>
+                                    <p class="text-gray-600">Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h (com agendamento)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-4">Nos siga nas redes sociais</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-gray-200 hover:bg-amber-700 hover:text-white text-gray-800 p-3 rounded-full transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="bg-gray-200 hover:bg-amber-700 hover:text-white text-gray-800 p-3 rounded-full transition duration-300"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="bg-gray-200 hover:bg-amber-700 hover:text-white text-gray-800 p-3 rounded-full transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="bg-gray-200 hover:bg-amber-700 hover:text-white text-gray-800 p-3 rounded-full transition duration-300"><i class="fab fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6 heading-font">Envie uma Mensagem</h3>
+                        <form id="contact-form">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="phone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="subject" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                                <select id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" required>
+                                    <option value="" disabled selected>Selecione um assunto</option>
+                                    <option value="civil">Direito Civil</option>
+                                    <option value="empresarial">Direito Empresarial</option>
+                                    <option value="imobiliario">Direito Imobiliário</option>
+                                    <option value="trabalhista">Direito Trabalhista</option>
+                                    <option value="penal">Direito Penal</option>
+                                    <option value="familia">Direito de Família</option>
+                                    <option value="outro">Outro</option>
+                                </select>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500" required></textarea>
+                            </div>
+                            <button type="submit" class="bg-amber-700 hover:bg-amber-800 text-white font-bold py-3 px-6 rounded transition duration-300 w-full">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.075426745291!2d-46.6534269246861!3d-23.56573436175744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1688743121161!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 heading-font">Silva & Advogados</h3>
+                    <p class="text-gray-400">Excelência em advocacia tradicional desde 1985, protegendo seus direitos com expertise e comprometimento.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 heading-font">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-amber-500 transition duration-300">Início</a></li>
+                        <li><a href="#sobre" class="text-gray-400 hover:text-amber-500 transition duration-300">Sobre Nós</a></li>
+                        <li><a href="#servicos" class="text-gray-400 hover:text-amber-500 transition duration-300">Áreas de Atuação</a></li>
+                        <li><a href="#equipe" class="text-gray-400 hover:text-amber-500 transition duration-300">Equipe</a></li>
+                        <li><a href="#contato" class="text-gray-400 hover:text-amber-500 transition duration-300">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 heading-font">Áreas de Atuação</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300">Direito Civil</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300">Direito Empresarial</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300">Direito Imobiliário</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300">Direito Trabalhista</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300">Direito Penal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 heading-font">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Assine nossa newsletter para receber atualizações e conteúdos jurídicos exclusivos.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Seu e-mail" class="px-4 py-2 rounded-l-md focus:outline-none text-gray-900 w-full">
+                        <button type="submit" class="bg-amber-700 hover:bg-amber-800 px-4 py-2 rounded-r-md transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 Silva & Advogados Associados. Todos os direitos reservados.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-amber-500 transition duration-300"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão de WhatsApp -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/5511987654321" class="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg flex items-center justify-center transition duration-300">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+    </div>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="back-to-top" class="hidden fixed bottom-20 right-6 bg-amber-700 hover:bg-amber-800 text-white p-3 rounded-full shadow-lg z-50 transition duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Menu mobile
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Formulário de contato
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Simulação de envio
+            alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+            contactForm.reset();
+        });
+        
+        // Botão voltar ao topo
+        const backToTopBtn = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.remove('hidden');
+            } else {
+                backToTopBtn.classList.add('hidden');
+            }
+        });
+        
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Suavizar rolagem para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Fechar menu mobile se estiver aberto
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
